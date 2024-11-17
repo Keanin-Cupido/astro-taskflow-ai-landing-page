@@ -1,0 +1,23 @@
+---
+import Container from './Container.astro';
+
+const stats = [
+  { value: '10K+', label: 'Active Users' },
+  { value: '98%', label: 'Customer Satisfaction' },
+  { value: '24/7', label: 'Support' },
+  { value: '200+', label: 'Enterprise Clients' }
+];
+---
+
+<section class="py-24 bg-primary-600 dark:bg-primary-700">
+  <Container>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      {stats.map(stat => (
+        <div class="animate-on-scroll">
+          <div class="text-4xl lg:text-5xl font-bold text-white mb-2">{stat.value}</div>
+          <div class="text-primary-100">{stat.label}</div>
+        </div>
+      ))}
+    </div>
+  </Container>
+</section>

@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/Container.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const posts = [
+  {
+    title: 'The Future of AI in Project Management',
+    excerpt: 'Explore how artificial intelligence is transforming the way teams manage projects and collaborate.',
+    author: 'Sarah Chen',
+    date: '2024-03-15',
+    image: 'https://demo-files.netlify.app/astro-saas/blog-1.jpg',
+    category: 'AI & Technology'
+  },
+  {
+    title: 'Best Practices for Remote Team Collaboration',
+    excerpt: 'Learn the essential strategies and tools for maintaining productivity in distributed teams.',
+    author: 'Michael Rodriguez',
+    date: '2024-03-10',
+    image: 'https://demo-files.netlify.app/astro-saas/blog-2.jpg',
+    category: 'Team Management'
+  },
+  {
+    title: 'Maximizing Productivity with TaskFlow AI',
+    excerpt: 'Discover how our AI-powered features can help your team achieve more in less time.',
+    author: 'Emily Thompson',
+    date: '2024-03-05',
+    image: 'https://demo-files.netlify.app/astro-saas/blog-3.jpg',
+    category: 'Product Updates'
+  }
+];
+---
+
+<Layout title="Blog - TaskFlow AI">
+  <main class="pt-32">
+    <Container>
+      <div class="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
+        <h1 class="text-4xl sm:text-5xl font-bold text-secondary-900 dark:text-white mb-6">
+          Latest Updates & Insights
+        </h1>
+        <p class="text-lg text-secondary-600 dark:text-secondary-400">
+          Stay up to date with the latest trends in project management and team productivity.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        {posts.map(post => (
+          <article class="bg-white dark:bg-secondary-800 rounded-xl shadow-lg overflow-hidden animate-on-scroll">
+            <img
+              src={post.image}
+              alt={post.title}
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="text-sm text-primary-600 dark:text-primary-400 mb-2">
+                {post.category}
+              </div>
+              <h2 class="text-xl font-semibold text-secondary-900 dark:text-white mb-2">
+                {post.title}
+              </h2>
+              <p class="text-secondary-600 dark:text-secondary-400 mb-4">
+                {post.excerpt}
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-secondary-600 dark:text-secondary-400">
+                  By {post.author}
+                </span>
+                <span class="text-sm text-secondary-600 dark:text-secondary-400">
+                  {new Date(post.date).toLocaleDateString('en-US', {
+                    month: 'long',
+                    day: 'numeric',
+                    year: 'numeric'
+                  })}
+                </span>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </Container>
+  </main>
+</Layout>

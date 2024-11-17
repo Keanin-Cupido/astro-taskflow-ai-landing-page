@@ -1,0 +1,99 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/Container.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const team = [
+  {
+    name: 'Sarah Chen',
+    role: 'CEO & Co-founder',
+    image: 'https://i.pravatar.cc/300?img=1',
+    bio: 'Former ML researcher at Stanford, passionate about AI and team productivity.'
+  },
+  {
+    name: 'Michael Rodriguez',
+    role: 'CTO & Co-founder',
+    image: 'https://i.pravatar.cc/300?img=2',
+    bio: 'Ex-Google engineer with 15 years of experience in AI and distributed systems.'
+  },
+  {
+    name: 'Emily Thompson',
+    role: 'Head of Product',
+    image: 'https://i.pravatar.cc/300?img=3',
+    bio: 'Product leader with a track record of launching successful SaaS products.'
+  },
+  {
+    name: 'David Kim',
+    role: 'Head of AI',
+    image: 'https://i.pravatar.cc/300?img=4',
+    bio: 'PhD in Machine Learning, specializing in natural language processing.'
+  }
+];
+---
+
+<Layout title="About Us - TaskFlow AI">
+  <main class="pt-32">
+    <Container>
+      <div class="max-w-3xl mx-auto text-center mb-16 animate-on-scroll">
+        <h1 class="text-4xl sm:text-5xl font-bold text-secondary-900 dark:text-white mb-6">
+          Our Mission
+        </h1>
+        <p class="text-lg text-secondary-600 dark:text-secondary-400">
+          We're on a mission to revolutionize project management through artificial intelligence, 
+          making teams more productive and work more enjoyable.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-16 mb-24">
+        <div class="animate-on-scroll">
+          <h2 class="text-3xl font-bold text-secondary-900 dark:text-white mb-6">
+            Our Story
+          </h2>
+          <div class="prose dark:prose-invert text-secondary-900 dark:text-white">
+            <p>
+              Founded in 2023, TaskFlow AI emerged from a simple observation: teams spend too much time 
+              managing tasks instead of doing them. Our founders, Sarah and Michael, experienced this 
+              firsthand at their previous companies.
+            </p>
+            <p>
+              What started as a side project quickly grew into a full-fledged platform used by thousands 
+              of teams worldwide. Our AI-powered approach to project management has revolutionized how 
+              teams work together.
+            </p>
+          </div>
+        </div>
+        <div class="relative animate-on-scroll">
+          <div class="absolute inset-0 bg-gradient-to-tr from-primary-500 to-secondary-500 rounded-3xl opacity-20 blur-3xl"></div>
+          <img
+            src="/office.jpg"
+            alt="Our office"
+            class="relative rounded-3xl shadow-2xl"
+          />
+        </div>
+      </div>
+
+      <div class="mb-24">
+        <h2 class="text-3xl font-bold text-secondary-900 dark:text-white text-center mb-16 animate-on-scroll">
+          Meet Our Team
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {team.map(member => (
+            <div class="text-center animate-on-scroll">
+              <img
+                src={member.image}
+                alt={member.name}
+                class="w-32 h-32 rounded-full mx-auto mb-4"
+              />
+              <h3 class="text-xl font-semibold text-secondary-900 dark:text-white mb-2">
+                {member.name}
+              </h3>
+              <p class="text-primary-600 dark:text-primary-400 mb-2">{member.role}</p>
+              <p class="text-secondary-600 dark:text-secondary-400">{member.bio}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </Container>
+  </main>
+</Layout>

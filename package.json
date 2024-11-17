@@ -1,0 +1,28 @@
+{
+  "name": "modern-saas-landing",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .js,.astro"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.5.0",
+    "gsap": "^3.12.5",
+    "sharp": "^0.33.2",
+    "tailwindcss": "^3.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-plugin-astro": "^0.31.4",
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0"
+  }
+}

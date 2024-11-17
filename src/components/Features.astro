@@ -1,0 +1,57 @@
+---
+import Container from './Container.astro';
+
+const features = [
+  {
+    title: 'AI-Powered Insights',
+    description: 'Get real-time project analytics and predictions powered by advanced machine learning algorithms.',
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />`
+  },
+  {
+    title: 'Smart Task Management',
+    description: 'Automatically prioritize and organize tasks based on deadlines, dependencies, and team capacity.',
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />`
+  },
+  {
+    title: 'Resource Optimization',
+    description: 'Optimize team workload and resource allocation with AI-driven recommendations.',
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />`
+  },
+  {
+    title: 'Automated Reporting',
+    description: 'Generate comprehensive project reports and insights with a single click.',
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />`
+  }
+];
+---
+
+<section id="features" class="py-24 bg-secondary-50 dark:bg-secondary-900/50">
+  <Container>
+    <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+      <h2 class="text-3xl sm:text-4xl font-bold text-secondary-900 dark:text-white mb-4">
+        Powerful Features for Modern Teams
+      </h2>
+      <p class="text-lg text-secondary-600 dark:text-secondary-400">
+        Everything you need to manage projects efficiently and drive team productivity.
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {features.map(feature => (
+        <div class="bg-white dark:bg-secondary-800 rounded-xl p-8 shadow-lg animate-on-scroll">
+          <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900/50 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <Fragment set:html={feature.icon} />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-secondary-900 dark:text-white mb-3">
+            {feature.title}
+          </h3>
+          <p class="text-secondary-600 dark:text-secondary-400">
+            {feature.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </Container>
+</section>

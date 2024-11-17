@@ -1,0 +1,65 @@
+---
+import Container from './Container.astro';
+
+const testimonials = [
+  {
+    quote: "TaskFlow AI has revolutionized how we manage projects. The AI insights are incredibly accurate and helpful.",
+    author: "Sarah Johnson",
+    role: "Project Manager",
+    company: "Tech Corp",
+    image: "https://i.pravatar.cc/100?img=1"
+  },
+  {
+    quote: "The automated task prioritization has saved us countless hours. It's like having an extra team member.",
+    author: "Michael Chen",
+    role: "Engineering Lead",
+    company: "Innovation Labs",
+    image: "https://i.pravatar.cc/100?img=2"
+  },
+  {
+    quote: "Best investment we've made for our project management needs. The ROI has been incredible.",
+    author: "Emily Rodriguez",
+    role: "Operations Director",
+    company: "Global Solutions",
+    image: "https://i.pravatar.cc/100?img=3"
+  }
+];
+---
+
+<section id="testimonials" class="py-24 bg-white dark:bg-secondary-900">
+  <Container>
+    <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+      <h2 class="text-3xl sm:text-4xl font-bold text-secondary-900 dark:text-white mb-4">
+        Trusted by Industry Leaders
+      </h2>
+      <p class="text-lg text-secondary-600 dark:text-secondary-400">
+        See what our customers have to say about their experience with TaskFlow AI.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {testimonials.map(testimonial => (
+        <div class="bg-secondary-50 dark:bg-secondary-800 rounded-xl p-8 animate-on-scroll">
+          <div class="flex items-center mb-6">
+            <img
+              src={testimonial.image}
+              alt={testimonial.author}
+              class="w-12 h-12 rounded-full"
+            />
+            <div class="ml-4">
+              <div class="font-semibold text-secondary-900 dark:text-white">
+                {testimonial.author}
+              </div>
+              <div class="text-sm text-secondary-600 dark:text-secondary-400">
+                {testimonial.role}, {testimonial.company}
+              </div>
+            </div>
+          </div>
+          <blockquote class="text-secondary-600 dark:text-secondary-400">
+            "{testimonial.quote}"
+          </blockquote>
+        </div>
+      ))}
+    </div>
+  </Container>
+</section>

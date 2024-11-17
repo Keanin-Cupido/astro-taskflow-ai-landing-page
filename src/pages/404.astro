@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/Container.astro';
+import Button from '../components/Button.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="404 - Page Not Found">
+  <Container class="min-h-screen flex items-center justify-center text-center py-20">
+    <div class="max-w-xl animate-on-scroll">
+      <h1 class="text-6xl font-bold text-secondary-900 dark:text-white mb-8">404</h1>
+      <p class="text-2xl font-semibold text-secondary-900 dark:text-white mb-4">Page Not Found</p>
+      <p class="text-secondary-600 dark:text-secondary-400 mb-8">
+        The page you're looking for doesn't exist or has been moved.
+      </p>
+      <Button href="/" size="lg">
+        Back to Home
+      </Button>
+    </div>
+  </Container>
+</Layout>

@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:astro/recommended"
+  ],
+  "overrides": [
+    {
+      "files": ["*.astro"],
+      "parser": "astro-eslint-parser"
+    }
+  ],
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-console": "warn"
+  }
+}

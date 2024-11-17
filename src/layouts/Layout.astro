@@ -1,0 +1,78 @@
+---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { 
+  title, 
+  description = "TaskFlow AI - Revolutionizing Project Management with Artificial Intelligence"
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/taskflow.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-white dark:bg-secondary-900 transition-colors duration-300 py-12">
+    <Header />
+    <slot />
+    <Footer />
+    <script>
+      import { gsap } from 'gsap';
+      import { ScrollTrigger } from 'gsap/ScrollTrigger';
+      
+      gsap.registerPlugin(ScrollTrigger);
+      
+      // Animate elements on scroll
+      gsap.utils.toArray('.animate-on-scroll').forEach((element) => {
+        gsap.from(element, {
+          y: 50,
+          opacity: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: element,
+            start: 'top 80%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse'
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter var', sans-serif;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+</style>

@@ -1,0 +1,52 @@
+---
+import Container from './Container.astro';
+import Button from './Button.astro';
+---
+
+<section class="relative pt-32 pb-24 overflow-hidden">
+  <Container>
+    <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+      <div class="animate-on-scroll">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-secondary-900 dark:text-white mb-6">
+          Transform Your <span class="text-primary-600 dark:text-primary-500">Workflow</span> with AI-Powered Intelligence
+        </h1>
+        <p class="text-lg text-secondary-600 dark:text-secondary-400 mb-8">
+          Streamline your project management with AI-driven insights, automated task prioritization, and intelligent resource allocation.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <Button href="#" size="lg">Start Free Trial</Button>
+          <Button href="#" variant="outline" size="lg">
+            Watch Demo
+            <svg class="ml-2 w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+            </svg>
+          </Button>
+        </div>
+        <div class="mt-8 flex items-center gap-4">
+          <div class="flex -space-x-2">
+            {[...Array(4)].map(() => (
+              <img
+                class="w-10 h-10 rounded-full border-2 border-white dark:border-secondary-900"
+                src={`https://i.pravatar.cc/40?${Math.random()}`}
+                alt="User avatar"
+              />
+            ))}
+          </div>
+          <div class="text-sm text-secondary-600 dark:text-secondary-400">
+            <span class="font-semibold text-secondary-900 dark:text-white">1,000+</span> teams already onboard
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 lg:mt-0 animate-on-scroll">
+        <div class="relative">
+          <div class="absolute inset-0 bg-gradient-to-tr from-primary-500 to-secondary-500 rounded-3xl opacity-20 blur-3xl"></div>
+          <img
+            src="/dashboard.jpg"
+            alt="Dashboard preview"
+            class="relative rounded-3xl shadow-2xl border border-secondary-200/50 dark:border-secondary-800/50"
+          />
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>
