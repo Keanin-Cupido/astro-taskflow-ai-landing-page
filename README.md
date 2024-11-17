@@ -4,6 +4,8 @@
 
 A professional landing page for **TaskFlow AI**, an intelligent project management web dashboard app. Built using modern web technologies to deliver a fast, responsive, and visually appealing experience.
 
+![taskflowai](https://github.com/user-attachments/assets/06d72931-2374-4304-9b53-57d5beb81517)
+
 ---
 
 ## 🚀 Features
