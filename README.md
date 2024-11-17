@@ -1,54 +1,65 @@
-# Astro Starter Kit: Basics
+<img src="https://github.com/user-attachments/assets/cdf56969-4d9f-4fdf-859b-7ce5fc27d9e9" alt="TaskFlow" width="96" />
 
-```sh
-npm create astro@latest -- --template basics
-```
+# TaskFlow AI
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+A professional landing page for **TaskFlow AI**, an intelligent project management web dashboard app. Built using modern web technologies to deliver a fast, responsive, and visually appealing experience.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## 🚀 Features
 
-## 🚀 Project Structure
+- **Responsive Design**: Optimized for all devices, ensuring a seamless user experience.
+- **AI Integration Showcase**: Highlighting the capabilities of AI-driven project management.
+- **Modern Tech Stack**: Built with cutting-edge tools for performance and maintainability.
+- **Fast Deployment**: Hosted on [Vercel](https://vercel.com/) for speed and reliability.
 
-Inside of your Astro project, you'll see the following folders and files:
+---
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 🛠️ Tech Stack
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- **[Astro.js](https://astro.build/)**: Static site generator for building fast, modern websites.
+- **[Tailwind CSS](https://tailwindcss.com/)**: Utility-first CSS framework for responsive and efficient styling.
+- **[Vercel](https://vercel.com/)**: Platform for frontend deployment.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+---
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 🌐 Live Demo
 
-## 🧞 Commands
+Check out the live site: [TaskFlow AI](https://taskflowai.vercel.app/)
 
-All commands are run from the root of the project, from a terminal:
+---
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## ⚙️ Getting Started
 
-## 👀 Want to learn more?
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/taskflow-ai.git
+   cd taskflow-ai
+   ```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
+   The site will be available at `http://localhost:3000`.
+
+4. **Build for production**:
+   ```bash
+   npm run build
+   ```
+
+5. **Preview the build**:
+   ```bash
+   npm run preview
+   ```
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
